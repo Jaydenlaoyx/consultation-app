@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import "./App.css";
+// import axios from 'axios';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+    const [recording, setRecording] = useState(false);
+    // const [transcript, setTranscript] = useState("");
+
+    const handleRecord = () => {
+        setRecording(!recording);
+        // Logic for recording will go here.
+    };
+
+    return (
+        <>
+          <div className="patientInfoSection">
+            <p className="patientInfoRow">Name: John Apples</p>
+            <p className="patientInfoRow">Date of Birth: 12/02/1992</p>
+            <p className="patientInfoRow">Gender: Male</p>
+          </div>
+          <div className="recordButtonsContainer">
+          <button className="recordButton" onClick={handleRecord}>
+                {recording ? 'Stop Recording' : 'Start Recording'}
+            </button>
+          </div>
+            <textarea className="notesField" placeholder="Add notes here..."></textarea>
+            {/* <span className="transcript"></span> */}
+        </>
+    );
+};
 
 export default App;
