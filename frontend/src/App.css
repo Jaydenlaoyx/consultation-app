@@ -1,31 +1,83 @@
+/* General styling */
+body {
+  font-family: 'Arial', sans-serif;
+  /* background-color: #f5f5f5; */
+  color: #333;
+}
+
+/* Patient info section */
 .patientInfoSection {
   margin-top: 30px;
   margin-left: 30px;
-
   font-size: medium;
 }
 
 .patientInfoSection .patientInfoRow {
   margin-top: 4px;
   margin-bottom: 0%;
-
   font-weight: bolder;
+}
+
+/* Record button */
+.recordButtonsContainer {
+  text-align: center;
+  margin: 30px 0;
 }
 
 .recordButton {
   margin-top: 30px;
   margin-left: 30px;
+
+  font-size: 1.2em;
+  padding: 10px 20px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.recordButton:hover {
+  background: #0056b3;
 }
 
 .notesField {
-  min-width: 650px;
-  min-height: 350px;
+  /* min-width: 650px;
+  min-height: 350px; */
 
   margin-top: 30px;
   margin-left: 30px;
+
+  width: 90%;
+  height: 90px;
+  min-height: 200px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1em;
+  margin-bottom: 30px;
+  resize: none;
 }
 
 .transcriptSection {
   margin-top: 30px;
   margin-left: 30px;
+}
+
+.audioPlayback {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Final display */
+.finalDisplay {
+  /* margin-top: 30px; */
+  margin-left: 30px;
+  width: 90%;
+  background: #e3f2fd;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 1.1em;
+  white-space: pre-wrap;
 }

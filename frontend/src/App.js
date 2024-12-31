@@ -89,7 +89,7 @@ const App = () => {
             ></textarea>
             {finalDisplay && (
                 <div className="finalDisplay">
-                    <h3>Final Display:</h3>
+                    <h3>Consultation Summary:</h3>
                     <pre>{finalDisplay}</pre>
                 </div>
             )}
