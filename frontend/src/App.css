@@ -1,63 +1,15 @@
-/* Navbar styles */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  background-color: #004080;
-  color: white;
-}
-
-.brand {
-  font-size: 1.5em;
-  font-weight: bold;
-}
-
-.nav-links a {
-  margin: 0 15px;
-  text-decoration: none;
-  color: white;
-  font-size: 1.1em;
-}
-
-.user-account {
-  font-size: 1.1em;
-}
-
-/* Rest of the styles */
+/* App container */
 .container {
-  max-width: 800px;
-  margin: 20px auto;
+  max-width: 1200px; /* Increased width */
+  margin: 80px auto 20px; /* Adjusted for navbar spacing */
   padding: 20px;
-  font-family: Arial, sans-serif;
+  font-family: 'Roboto', Arial, sans-serif; /* Using Roboto font */
   background-color: #f9f9f9;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-h2 {
-  margin-bottom: 20px;
-}
-
-h3 {
-  margin-bottom: 10px;
-}
-
-textarea {
-  width: 100%;
-  height: 100px;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  font-size: 1em;
-}
-
-.recordingDuration {
-  margin-top: 10px;
-  font-size: 1em;
-  color: #555;
-}
-
+/* Button styles */
 button {
   margin: 10px 5px;
   padding: 10px 20px;
@@ -65,9 +17,114 @@ button {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  background-color: #004080; /* Dark blue */
+  color: white;
+  font-family: 'Roboto', Arial, sans-serif; /* Using Roboto font */
 }
 
-.newConsultationButton {
-  background-color: #28a745;
+button:hover {
+  background-color: #003060; /* Darker blue on hover */
+}
+
+/* Notes field */
+textarea {
+  width: 100%;
+  max-width: calc(100% - 20px); /* Ensures it doesn't overflow container */
+  height: 100px;
+  padding: 10px;
+  margin-right: 20px; /* Space from right side */
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1em;
+  font-family: 'Roboto', Arial, sans-serif; /* Using Roboto font */
+  resize: vertical; /* Only vertical resizing */
+}
+
+/* Section spacing */
+.section {
+  margin-bottom: 20px;
+}
+
+.section-title {
+  font-size: 1.3em;
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-family: 'Roboto', Arial, sans-serif; /* Using Roboto font */
+}
+
+/* Recording duration */
+.recordingDuration {
+  margin-top: 10px;
+  font-size: 1em;
+  color: #555;
+  font-family: 'Roboto', Arial, sans-serif; /* Using Roboto font */
+}
+
+/* Navbar styles */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  background-color: #004080; /* Dark blue color for navbar */
   color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  font-family: 'Roboto', Arial, sans-serif; /* Using Roboto font */
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.brand {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-right: 20px;
+  color: white;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+}
+
+.nav-links a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: white;
+  font-size: 1.1em;
+  font-family: 'Roboto', Arial, sans-serif; /* Using Roboto font */
+}
+
+.user-account {
+  font-size: 1em;
+  color: white;
+  white-space: nowrap; /* Prevent wrapping */
+  margin-right: 4em;
+  font-family: 'Roboto', Arial, sans-serif; /* Using Roboto font */
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+  }
+
+  .container {
+    margin: 100px 10px 20px;
+    padding: 10px;
+  }
+
+  button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
 }
