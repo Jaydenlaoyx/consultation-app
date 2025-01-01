@@ -1,3 +1,6 @@
+require('dotenv').config(); // Load environment variables from .env
+console.log("Environment Variable:", process.env.CLOUD_APPLICATION_CREDENTIALS);// Test that the variable is loaded
+
 const express = require('express');
 const cors = require('cors');
 const speech = require('@google-cloud/speech');
@@ -31,7 +34,9 @@ app.post('/upload', upload.single('audio'), async (req, res) => {
         });
 
         // Transcribe the audio
-        const client = new speech.SpeechClient();
+        const client = new speech.SpeechClient({
+            keyFilename: process.env.CLOUD_APPLICATION_CREDENTIALS,
+        });
         const audioBytes = fs.readFileSync(monoFilePath).toString('base64');
 
         const request = {
