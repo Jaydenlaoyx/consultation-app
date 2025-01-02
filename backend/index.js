@@ -1,5 +1,4 @@
 require('dotenv').config(); // Load environment variables from .env
-console.log("Environment Variable:", process.env.CLOUD_APPLICATION_CREDENTIALS);// Test that the variable is loaded
 
 const express = require('express');
 const cors = require('cors');
@@ -61,10 +60,6 @@ app.post('/upload', upload.single('audio'), async (req, res) => {
         console.error('Error processing audio:', err);
         res.status(500).send('Error processing audio');
     }
-});
-
-app.get('/healthcheck', (req, res) => {
-    res.send({ status: 'OK' });
 });
 
 app.get('/', (req, res) => {
